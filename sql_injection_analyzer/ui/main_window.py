@@ -376,7 +376,7 @@ class MainWindow(QMainWindow):
             self.status_bar.showMessage(f"Loading {len(file_paths)} file(s)...")
             
             try:
-                from ..parsers import LogParser
+                from parsers import LogParser
                 parser = LogParser()
                 
                 all_entries = []
@@ -410,7 +410,7 @@ class MainWindow(QMainWindow):
                 self.result = []
             
             def run(self):
-                from ..analyzers import SQLInjectionAnalyzer
+                from analyzers import SQLInjectionAnalyzer
                 analyzer = SQLInjectionAnalyzer()
                 self.result = analyzer.analyze_batch(self.entries)
         
@@ -441,8 +441,8 @@ class MainWindow(QMainWindow):
             output_path = file_dialog.selectedFiles()[0]
             
             try:
-                from ..reporters import ReportGenerator
-                from ..core.models import DashboardStats
+                from reporters import ReportGenerator
+                from core.models import DashboardStats
                 
                 # Calculate stats
                 stats = DashboardStats(

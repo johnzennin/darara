@@ -11,7 +11,11 @@ import math
 from typing import List, Dict, Tuple, Optional
 from datetime import datetime
 
-from ..core.models import (
+# Import models directly for standalone execution
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.models import (
     LogEntry, DetectionResult, DetectionType, 
     HTTPRequest, AnalysisRule, SeverityLevel
 )

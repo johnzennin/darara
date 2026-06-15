@@ -13,7 +13,11 @@ from datetime import datetime
 from typing import List, Optional, Dict, Any
 from pathlib import Path
 
-from ..core.models import LogEntry, HTTPRequest, HTTPResponse
+# Import models directly for standalone execution
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.models import LogEntry, HTTPRequest, HTTPResponse
 
 
 class LogParser:
