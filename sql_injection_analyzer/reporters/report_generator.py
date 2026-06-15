@@ -11,7 +11,10 @@ from datetime import datetime
 from typing import List, Dict, Any
 from pathlib import Path
 
-from ..core.models import (
+# Import models directly for standalone execution
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.models import (
     LogEntry, SeverityLevel, VulnerabilityReport, DashboardStats
 )
 

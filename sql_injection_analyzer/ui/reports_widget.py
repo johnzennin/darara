@@ -240,8 +240,8 @@ class ReportsWidget(QWidget):
             output_path = file_dialog.selectedFiles()[0]
             
             try:
-                from ..reporters import ReportGenerator
-                from ..core.models import DashboardStats
+                from reporters import ReportGenerator
+                from core.models import DashboardStats
                 
                 stats = DashboardStats(
                     total_logs=len(entries),
@@ -279,7 +279,7 @@ class ReportsWidget(QWidget):
             output_path = file_dialog.selectedFiles()[0]
             
             try:
-                from ..parsers import LogParser
+                from parsers import LogParser
                 
                 parser = LogParser()
                 parser.export_to_json(entries, output_path)

@@ -17,7 +17,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     """Launch the application."""
-    from sql_injection_analyzer.ui.main_window import main as ui_main
+    # Direct import for standalone execution
+    from ui.main_window import main as ui_main
     ui_main()
 
 

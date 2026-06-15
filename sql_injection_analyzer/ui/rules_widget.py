@@ -11,7 +11,11 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt
 
-from ..core.models import AnalysisRule, DetectionType
+# Import models directly for standalone execution
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.models import AnalysisRule, DetectionType
 
 
 class RulesWidget(QWidget):
@@ -188,7 +192,7 @@ class RulesWidget(QWidget):
         self.rules_table.setRowCount(0)
         
         # Get analyzer rules
-        from ..analyzers import SQLInjectionAnalyzer
+        from analyzers import SQLInjectionAnalyzer
         analyzer = SQLInjectionAnalyzer()
         
         # Add default rules

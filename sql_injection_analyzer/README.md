@@ -61,12 +61,30 @@ A professional, modern desktop application for analyzing HTTP logs and detecting
 ```bash
 # Install dependencies
 pip install PyQt6 pyqtgraph matplotlib reportlab
-
-# Run the application
-python -m sql_injection_analyzer.main
 ```
 
 ## Usage
+
+### Windows
+
+Double-click `run.bat` or run from command prompt:
+
+```cmd
+cd sql_injection_analyzer
+python main.py
+```
+
+### Linux/macOS
+
+```bash
+cd sql_injection_analyzer
+python main.py
+```
+
+Or run as module:
+```bash
+python -m sql_injection_analyzer.main
+```
 
 1. **Launch the application**:
    ```bash
